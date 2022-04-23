@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QL_Sinh_Vien.score;
 
 namespace QL_Sinh_Vien
 {
@@ -26,7 +27,7 @@ namespace QL_Sinh_Vien
             //{
             //    Application.Exit();
             //}
-            Application.Run(new PrintForm());
+            Application.Run(new MainForm());
         }
     }
 }

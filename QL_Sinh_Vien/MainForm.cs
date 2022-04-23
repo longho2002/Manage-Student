@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QL_Sinh_Vien.score;
 
 namespace QL_Sinh_Vien
 {
@@ -39,6 +40,63 @@ namespace QL_Sinh_Vien
         {
             Statics stdStatic = new Statics();
             stdStatic.Show(this);
+        }
+
+        private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 printForm = new Form1();
+            printForm.Show(this);
+        }
+
+        private void removeCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveCourseForm f = new RemoveCourseForm();
+            f.Show(this);
+        }
+
+        private void editCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCourseForm a = new EditCourseForm();
+            a.Show(this);
+        }
+
+        private void manageCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageCourseForm a = new ManageCourseForm();
+            a.Show(this);
+        }
+
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrintCourseForm a = new PrintCourseForm();
+            a.Show(this);
+        }
+
+        private void addScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddScoreForm a = new AddScoreForm();
+            a.Show(this);
+        }
+
+        private void removeScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveScoreForm a = new RemoveScoreForm();
+            a.Show(this);
+        }
+
+        private void manageScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void avgScoreByCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printResultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
