@@ -57,7 +57,6 @@ namespace QL_Sinh_Vien
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-
                 Export_Data_To_Word(dataGridView1, sfd.FileName);
             }
         }
@@ -152,5 +151,7 @@ namespace QL_Sinh_Vien
                 //NASSIM LOUCHANI
             }
         }
+
+
     }
 }

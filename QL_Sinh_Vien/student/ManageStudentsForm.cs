@@ -9,6 +9,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Mime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,6 +25,8 @@ namespace QL_Sinh_Vien
 
         public void fillGrid(SqlCommand command)
         {
+            DataGridView1.DataSource = null;
+            DataGridView1.Rows.Clear();
             DataGridView1.ReadOnly = true;
             DataGridViewImageColumn piccol = new DataGridViewImageColumn();
             DataGridView1.RowTemplate.Height = 80;
@@ -54,7 +57,9 @@ namespace QL_Sinh_Vien
 
         private void ButtonSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE CONCAT(fname, lname, address) LIKE'%" + tb_find.Text + "%'");
+            SqlCommand command = new SqlCommand("SELECT * FROM std WHERE Trim(LOWER(CONCAT(id, fname, lname, address))) LIKE N'%" + tb_find.Text.ToLower() + "%'");
+            //command.Parameters.Add("@tbfind", SqlDbType.NVarChar).Value = tb_find.Text.ToLower();
+            //MessageBox.Show(command.CommandText);
             fillGrid(command);
         }
 
@@ -69,7 +74,6 @@ namespace QL_Sinh_Vien
         private void ButtonReset_Click(object sender, EventArgs e)
         {
             tb_ID.Text = "";
-
             tb_FName.Text = "";
             tb_LName.Text = "";
             tb_Address.Text = "";
@@ -104,35 +108,61 @@ namespace QL_Sinh_Vien
         private void ButtonAddStudent_Click(object sender, EventArgs e)
         {
             STUDENT student = new STUDENT();
-            int id = Convert.ToInt32(tb_ID.Text);
-            string fname = tb_FName.Text;
-            string lname = tb_LName.Text;
-            DateTime bdate = dateTimePicker1.Value;
-            string phone = tb_Phone.Text;
-            string adrs = tb_Address.Text;
-            string gender = "Male";
-            if (radioButtonFemale.Checked)
-                gender = "Female";
-            MemoryStream pic = new MemoryStream();
-            int born_year = dateTimePicker1.Value.Year;
-            int this_year = DateTime.Now.Year;
-            // allow only students age between 10 - 100
-            if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
-                MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (verif())
+            try
             {
-                PictureBoxStudentImage1.Image.Save(pic, PictureBoxStudentImage1.Image.RawFormat);
-                if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
+                if (!tb_ID.Text.All(char.IsDigit))
                 {
-                    MessageBox.Show("New Student Added",
-                        "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    fillGrid(new SqlCommand("SELECT *FROM std"));
+                    throw new  Exception("ID mustn't have char");
+                }
+                bool containsInt = tb_LName.Text.Any(char.IsDigit);
+                containsInt = tb_FName.Text.Any(char.IsDigit);
+                if (containsInt == true)
+                {
+                    throw new Exception("Fname and Lname not contain digit");
+                }
+                if (Regex.IsMatch(tb_Address.Text, @"^\d+$"))
+                {
+                    throw new Exception("Address must be have char");
+                }
+                if (!Regex.IsMatch(tb_Phone.Text, @"^\d+$"))
+                {
+                    throw new Exception("Phone must be have number");
+                }
+                int id = Convert.ToInt32(tb_ID.Text);
+                string fname = tb_FName.Text;
+                string lname = tb_LName.Text;
+                DateTime bdate = dateTimePicker1.Value;
+                string phone = tb_Phone.Text;
+                string adrs = tb_Address.Text;
+                string gender = "Male";
+                if (radioButtonFemale.Checked)
+                    gender = "Female";
+                MemoryStream pic = new MemoryStream();
+                int born_year = dateTimePicker1.Value.Year;
+                int this_year = DateTime.Now.Year;
+                // allow only students age between 10 - 100
+                if (((this_year - born_year) < 10) || ((this_year - born_year) > 100))
+                    MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (verif())
+                {
+                    PictureBoxStudentImage1.Image.Save(pic, PictureBoxStudentImage1.Image.RawFormat);
+                    if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
+                    {
+                        MessageBox.Show("New Student Added",
+                            "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        fillGrid(new SqlCommand("SELECT *FROM std"));
+                    }
+                    else
+                        MessageBox.Show("Error", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show("Error", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Empty Fields", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
-                MessageBox.Show("Empty Fields", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+           
         }
 
         private void ManageStudentsForm_Load(object sender, EventArgs e)
@@ -197,7 +227,7 @@ namespace QL_Sinh_Vien
                     {
                         MessageBox.Show("Student Information Updated", "Edit Student", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                       fillGrid(new SqlCommand("select * from std"));
+                        fillGrid(new SqlCommand("select * from std"));
                     }
                     else
                         MessageBox.Show("Error", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -210,6 +240,13 @@ namespace QL_Sinh_Vien
                 }
 
 
+        }
+
+        private void btn_addcourse_Click(object sender, EventArgs e)
+        {
+            AddCourseFrm a = new AddCourseFrm();
+            a.tb_id.Text = DataGridView1.CurrentRow.Cells[0].Value.ToString();
+            a.Show(this);
         }
     }
 }

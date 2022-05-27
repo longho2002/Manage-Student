@@ -42,6 +42,7 @@ namespace QL_Sinh_Vien
             tb_Label.Text = dr.ItemArray[1].ToString();
             numericUpDown1.Value = int.Parse(dr.ItemArray[2].ToString());
             tb_Des.Text = dr.ItemArray[3].ToString();
+            tb_semester.Text = dr.ItemArray[4].ToString();
         }
 
         private void ListtBoxCourses_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace QL_Sinh_Vien
             }
             else if (course.checkCourseName(name))
             {
-                if (course.insertCourse(id, name, hrs, descr))
+                if (course.insertCourse(id, name, hrs, descr,tb_semester.Text))
                 {
                     MessageBox.Show("New Course Inserted",
                         "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);

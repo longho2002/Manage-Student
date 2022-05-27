@@ -67,7 +67,7 @@
             this.tb_stdID.Location = new System.Drawing.Point(170, 60);
             this.tb_stdID.Margin = new System.Windows.Forms.Padding(2);
             this.tb_stdID.Name = "tb_stdID";
-            this.tb_stdID.Size = new System.Drawing.Size(159, 26);
+            this.tb_stdID.Size = new System.Drawing.Size(258, 26);
             this.tb_stdID.TabIndex = 24;
             // 
             // lb_des
@@ -120,14 +120,14 @@
             this.tb_score.Location = new System.Drawing.Point(170, 151);
             this.tb_score.Margin = new System.Windows.Forms.Padding(2);
             this.tb_score.Name = "tb_score";
-            this.tb_score.Size = new System.Drawing.Size(159, 26);
+            this.tb_score.Size = new System.Drawing.Size(258, 26);
             this.tb_score.TabIndex = 27;
             // 
             // btn_edit
             // 
-            this.btn_edit.BackColor = System.Drawing.Color.Silver;
+            this.btn_edit.BackColor = System.Drawing.Color.IndianRed;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(200, 375);
+            this.btn_edit.Location = new System.Drawing.Point(203, 388);
             this.btn_edit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(159, 51);
@@ -139,9 +139,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(549, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(460, 60);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(364, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(453, 306);
             this.dataGridView1.TabIndex = 29;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewStudents_Click);
             // 

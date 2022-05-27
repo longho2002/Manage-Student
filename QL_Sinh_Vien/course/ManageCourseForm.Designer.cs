@@ -45,6 +45,8 @@
             this.btn_edit = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.ListtBoxCourses = new System.Windows.Forms.ListBox();
+            this.tb_semester = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // tb_Des
             // 
             this.tb_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Des.Location = new System.Drawing.Point(165, 191);
+            this.tb_Des.Location = new System.Drawing.Point(164, 240);
             this.tb_Des.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Des.Multiline = true;
             this.tb_Des.Name = "tb_Des";
@@ -80,7 +82,7 @@
             // 
             this.lb_des.AutoSize = true;
             this.lb_des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_des.Location = new System.Drawing.Point(40, 195);
+            this.lb_des.Location = new System.Drawing.Point(39, 240);
             this.lb_des.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_des.Name = "lb_des";
             this.lb_des.Size = new System.Drawing.Size(89, 20);
@@ -236,12 +238,34 @@
             this.ListtBoxCourses.Click += new System.EventHandler(this.ListtBoxCourses_Click);
             this.ListtBoxCourses.SelectedIndexChanged += new System.EventHandler(this.ListtBoxCourses_SelectedIndexChanged);
             // 
+            // tb_semester
+            // 
+            this.tb_semester.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_semester.Location = new System.Drawing.Point(165, 197);
+            this.tb_semester.Margin = new System.Windows.Forms.Padding(2);
+            this.tb_semester.Name = "tb_semester";
+            this.tb_semester.Size = new System.Drawing.Size(159, 26);
+            this.tb_semester.TabIndex = 41;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 200);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Semester";
+            // 
             // ManageCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(928, 503);
+            this.Controls.Add(this.tb_semester);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.ListtBoxCourses);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_edit);
@@ -287,5 +311,7 @@
         private System.Windows.Forms.Button btn_edit;
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.ListBox ListtBoxCourses;
+        private System.Windows.Forms.TextBox tb_semester;
+        private System.Windows.Forms.Label label2;
     }
 }

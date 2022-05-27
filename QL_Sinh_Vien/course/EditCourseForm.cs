@@ -32,22 +32,35 @@ namespace QL_Sinh_Vien
         }
         private void btn_edit_Click(object sender, EventArgs e)
         {
-                        string name = tb_Label.Text;
-            int hrs = (int)numericUpDown1.Value;
-            string descr = tb_Des.Text;
-            int id = Convert.ToInt32(comboBox1.SelectedValue);
-            if (!course.checkCourseName(name, Convert.ToInt32(comboBox1.SelectedValue)))
+            try
             {
-                MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (tb_Label.Text.All(char.IsDigit) == true)
+                {
+                    throw new Exception("Label must have character");
+                }
+                string name = tb_Label.Text;
+                int hrs = (int)numericUpDown1.Value;
+                string descr = tb_Des.Text;
+                int id = Convert.ToInt32(comboBox1.SelectedValue);
+                if (!course.checkCourseName(name, Convert.ToInt32(comboBox1.SelectedValue)))
+                {
+                    MessageBox.Show("This Course Name Already Exist", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (course.updateCourse(id, name, hrs, descr))
+                {
+                    MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information); fillCombo(comboBox1.SelectedIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Course Not Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else if (course.updateCourse(id, name, hrs, descr))
+            catch (Exception exception)
             {
-                MessageBox.Show("Course Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information); fillCombo(comboBox1.SelectedIndex);
+                MessageBox.Show(exception.Message);
             }
-            else
-            {
-                MessageBox.Show("Course Not Updated", "Edit Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+
+           
             //try
             //{
             //    int id = Convert.ToInt32(comboBox1.SelectedValue);

@@ -98,12 +98,13 @@ namespace QL_Sinh_Vien
         {
             return execCount("SELECT COUNT(*) FROM COURSE");
         }
-        public bool insertCourse(int Id, string label, int period, String description)
+        public bool insertCourse(int Id, string label, int period, String description, string semester)
         {
             try
             {
-                SqlCommand command = new SqlCommand("INSERT INTO COURSE(Id, label, period, description)  VALUES(@id, @label, @period, @description)", mydb.getConnection);
+                SqlCommand command = new SqlCommand("INSERT INTO COURSE(Id, label, period,semester, description)  VALUES(@id, @label,@semester, @period, @description)", mydb.getConnection);
                 command.Parameters.Add("@id", SqlDbType.Int).Value = Id;
+                command.Parameters.Add("@semester", SqlDbType.VarChar).Value = semester;
                 command.Parameters.Add("@label", SqlDbType.NVarChar).Value = label;
                 command.Parameters.Add("@period", SqlDbType.Int).Value = period;
                 command.Parameters.Add("@description", SqlDbType.Text).Value = description;

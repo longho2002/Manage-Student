@@ -37,27 +37,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 83);
+            this.label1.Location = new System.Drawing.Point(45, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 29);
+            this.label1.Size = new System.Drawing.Size(187, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter The Course ID:";
             // 
             // tb_id
             // 
             this.tb_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_id.Location = new System.Drawing.Point(304, 78);
+            this.tb_id.Location = new System.Drawing.Point(236, 63);
+            this.tb_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_id.Name = "tb_id";
-            this.tb_id.Size = new System.Drawing.Size(289, 34);
+            this.tb_id.Size = new System.Drawing.Size(218, 28);
             this.tb_id.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(629, 75);
+            this.button1.Location = new System.Drawing.Point(472, 61);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 41);
+            this.button1.Size = new System.Drawing.Size(107, 33);
             this.button1.TabIndex = 2;
             this.button1.Text = "Remove";
             this.button1.UseVisualStyleBackColor = false;
@@ -65,13 +68,14 @@
             // 
             // RemoveCourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(816, 197);
+            this.ClientSize = new System.Drawing.Size(612, 160);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tb_id);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RemoveCourseForm";
             this.Text = "RemoveCourseForm";
             this.ResumeLayout(false);

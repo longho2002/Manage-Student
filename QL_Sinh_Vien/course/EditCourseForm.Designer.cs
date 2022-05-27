@@ -44,9 +44,10 @@
             // 
             this.btn_edit.BackColor = System.Drawing.Color.Honeydew;
             this.btn_edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_edit.Location = new System.Drawing.Point(244, 367);
+            this.btn_edit.Location = new System.Drawing.Point(153, 309);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(365, 43);
+            this.btn_edit.Size = new System.Drawing.Size(274, 35);
             this.btn_edit.TabIndex = 17;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = false;
@@ -55,27 +56,30 @@
             // tb_Des
             // 
             this.tb_Des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Des.Location = new System.Drawing.Point(357, 204);
+            this.tb_Des.Location = new System.Drawing.Point(268, 166);
+            this.tb_Des.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_Des.Multiline = true;
             this.tb_Des.Name = "tb_Des";
-            this.tb_Des.Size = new System.Drawing.Size(211, 139);
+            this.tb_Des.Size = new System.Drawing.Size(159, 114);
             this.tb_Des.TabIndex = 16;
             // 
             // tb_Label
             // 
             this.tb_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Label.Location = new System.Drawing.Point(357, 96);
+            this.tb_Label.Location = new System.Drawing.Point(268, 78);
+            this.tb_Label.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_Label.Name = "tb_Label";
-            this.tb_Label.Size = new System.Drawing.Size(211, 30);
+            this.tb_Label.Size = new System.Drawing.Size(159, 26);
             this.tb_Label.TabIndex = 14;
             // 
             // lb_des
             // 
             this.lb_des.AutoSize = true;
             this.lb_des.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_des.Location = new System.Drawing.Point(191, 209);
+            this.lb_des.Location = new System.Drawing.Point(143, 170);
+            this.lb_des.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_des.Name = "lb_des";
-            this.lb_des.Size = new System.Drawing.Size(109, 25);
+            this.lb_des.Size = new System.Drawing.Size(89, 20);
             this.lb_des.TabIndex = 12;
             this.lb_des.Text = "Description";
             // 
@@ -83,9 +87,10 @@
             // 
             this.lb_Period.AutoSize = true;
             this.lb_Period.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Period.Location = new System.Drawing.Point(191, 152);
+            this.lb_Period.Location = new System.Drawing.Point(143, 124);
+            this.lb_Period.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Period.Name = "lb_Period";
-            this.lb_Period.Size = new System.Drawing.Size(68, 25);
+            this.lb_Period.Size = new System.Drawing.Size(54, 20);
             this.lb_Period.TabIndex = 11;
             this.lb_Period.Text = "Period";
             // 
@@ -93,9 +98,10 @@
             // 
             this.lb_Label.AutoSize = true;
             this.lb_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Label.Location = new System.Drawing.Point(191, 101);
+            this.lb_Label.Location = new System.Drawing.Point(143, 82);
+            this.lb_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Label.Name = "lb_Label";
-            this.lb_Label.Size = new System.Drawing.Size(60, 25);
+            this.lb_Label.Size = new System.Drawing.Size(48, 20);
             this.lb_Label.TabIndex = 10;
             this.lb_Label.Text = "Label";
             // 
@@ -103,9 +109,10 @@
             // 
             this.lb_ID.AutoSize = true;
             this.lb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ID.Location = new System.Drawing.Point(191, 44);
+            this.lb_ID.Location = new System.Drawing.Point(143, 36);
+            this.lb_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_ID.Name = "lb_ID";
-            this.lb_ID.Size = new System.Drawing.Size(160, 25);
+            this.lb_ID.Size = new System.Drawing.Size(130, 20);
             this.lb_ID.TabIndex = 9;
             this.lb_ID.Text = "Select Course ID";
             // 
@@ -113,9 +120,10 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(357, 44);
+            this.comboBox1.Location = new System.Drawing.Point(268, 36);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 33);
+            this.comboBox1.Size = new System.Drawing.Size(159, 28);
             this.comboBox1.TabIndex = 18;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
@@ -123,17 +131,18 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(357, 154);
+            this.numericUpDown1.Location = new System.Drawing.Point(268, 125);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(211, 30);
+            this.numericUpDown1.Size = new System.Drawing.Size(158, 26);
             this.numericUpDown1.TabIndex = 19;
             // 
             // EditCourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_edit);
@@ -143,6 +152,7 @@
             this.Controls.Add(this.lb_Period);
             this.Controls.Add(this.lb_Label);
             this.Controls.Add(this.lb_ID);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditCourseForm";
             this.Text = "EditCourseForm";
             this.Load += new System.EventHandler(this.EditCourseForm_Load);

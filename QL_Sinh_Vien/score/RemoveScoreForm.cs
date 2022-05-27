@@ -34,7 +34,7 @@ namespace QL_Sinh_Vien.score
                 id_std = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 id_course = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value.ToString());
                 score.deleteScore(id_std, id_course);
-                MessageBox.Show("Delete success full!");
+                MessageBox.Show("Delete successfully!");
             }
             catch (Exception exception)
             {

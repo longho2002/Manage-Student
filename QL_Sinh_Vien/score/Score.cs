@@ -11,7 +11,7 @@ namespace QL_Sinh_Vien.score
     internal class Score
     {
         private MY_DB mydb = new MY_DB();
-        public bool insertScore(int student_ID, int courseID, float scoreValue, string description)
+        public bool insertScore(int student_ID, int courseID, double scoreValue, string description)
         {
             SqlCommand command = new SqlCommand(
                 "INSERT INTO Score(student_id, course_id, student_score, description) VALUES (@sid,@cid, @scr" +

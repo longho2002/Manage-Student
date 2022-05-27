@@ -46,10 +46,19 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Word\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Tools.Excel.v9.0\9.0.0.0__b03f5f7f11d50a3a\Microsoft.Office.Tools.Excel.v9.0.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -69,18 +78,94 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Document.NET, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.2.1.0\lib\net40\Xceed.Document.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Words.NET, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.2.1.0\lib\net40\Xceed.Words.NET.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContactForm.Designer.cs">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourseFrm.Designer.cs">
+      <DependentUpon>AddCourseFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs" />
+    <Compile Include="course\AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="course\AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgotpass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotpass.Designer.cs">
+      <DependentUpon>forgotpass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="HR_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR_Form.Designer.cs">
+      <DependentUpon>HR_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mail.cs" />
     <Compile Include="QL_sinh_vienDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_sinh_vienDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\Result_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\Result_Form.Designer.cs">
+      <DependentUpon>Result_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\statisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\statisticForm.Designer.cs">
+      <DependentUpon>statisticForm.cs</DependentUpon>
     </Compile>
     <Compile Include="score\AddScoreForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="score\AddScoreForm.Designer.cs">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="score\avgScoreByCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="score\avgScoreByCourseForm.Designer.cs">
+      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="score\ManageScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="score\ManageScoreForm.Designer.cs">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="score\PrintScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="score\PrintScore.Designer.cs">
+      <DependentUpon>PrintScore.cs</DependentUpon>
     </Compile>
     <Compile Include="score\RemoveScoreForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +174,18 @@
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
     </Compile>
     <Compile Include="score\Score.cs" />
+    <Compile Include="SelectContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectContact.Designer.cs">
+      <DependentUpon>SelectContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowFullContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowFullContact.Designer.cs">
+      <DependentUpon>ShowFullContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="student\AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +198,6 @@
     </Compile>
     <Compile Include="course\EditCourseForm.Designer.cs">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="course\AddCourse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="course\Form1.Designer.cs">
-      <DependentUpon>AddCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Hash.cs" />
     <Compile Include="MainForm.cs">
@@ -203,20 +294,69 @@
     <Compile Include="student\UpdateDeleteStudentForm.Designer.cs">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateContact.Designer.cs">
+      <DependentUpon>UpdateContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.Designer.cs">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddContactForm.resx">
+      <DependentUpon>AddContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCourseFrm.resx">
+      <DependentUpon>AddCourseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="course\AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotpass.resx">
+      <DependentUpon>forgotpass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR_Form.resx">
+      <DependentUpon>HR_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\Result_Form.resx">
+      <DependentUpon>Result_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\statisticForm.resx">
+      <DependentUpon>statisticForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="score\AddScoreForm.resx">
       <DependentUpon>AddScoreForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="score\avgScoreByCourseForm.resx">
+      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="score\ManageScoreForm.resx">
+      <DependentUpon>ManageScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="score\PrintScore.resx">
+      <DependentUpon>PrintScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="score\RemoveScoreForm.resx">
       <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectContact.resx">
+      <DependentUpon>SelectContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowFullContact.resx">
+      <DependentUpon>ShowFullContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="student\AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="course\EditCourseForm.resx">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="course\Form1.resx">
-      <DependentUpon>AddCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>
@@ -258,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="student\UpdateDeleteStudentForm.resx">
       <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateContact.resx">
+      <DependentUpon>UpdateContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateUser.resx">
+      <DependentUpon>UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

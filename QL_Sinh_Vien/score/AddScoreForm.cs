@@ -44,6 +44,10 @@ namespace QL_Sinh_Vien.score
         {
             try
             {
+                if (!tb_score.Text.All(char.IsDigit))
+                {
+                    throw new Exception("Score must digit");
+                }
                 int student_ID = Convert.ToInt32(tb_stdID.Text);
                 int courseID = Convert.ToInt32(cb_course.SelectedValue);
                 float score_Value = Convert.ToInt32(tb_score.Text);

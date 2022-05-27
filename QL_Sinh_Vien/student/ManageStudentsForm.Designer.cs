@@ -51,15 +51,6 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.DataGridView1 = new System.Windows.Forms.DataGridView();
-            this.PictureBoxStudentImage1 = new QL_Sinh_Vien.RJCircularPictureBox();
-            this.lb_Total = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_find = new System.Windows.Forms.TextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.qL_sinh_vienDataSet = new QL_Sinh_Vien.QL_sinh_vienDataSet();
-            this.qLsinhvienDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stdBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stdTableAdapter = new QL_Sinh_Vien.QL_sinh_vienDataSetTableAdapters.stdTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,11 +59,21 @@
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.stdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLsinhvienDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qL_sinh_vienDataSet = new QL_Sinh_Vien.QL_sinh_vienDataSet();
+            this.PictureBoxStudentImage1 = new QL_Sinh_Vien.RJCircularPictureBox();
+            this.lb_Total = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tb_find = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.stdTableAdapter = new QL_Sinh_Vien.QL_sinh_vienDataSetTableAdapters.stdTableAdapter();
+            this.btn_addcourse = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qL_sinh_vienDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLsinhvienDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLsinhvienDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qL_sinh_vienDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Remove
@@ -317,6 +318,70 @@
             this.DataGridView1.TabIndex = 76;
             this.DataGridView1.Click += new System.EventHandler(this.DataGridView1_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // fnameDataGridViewTextBoxColumn
+            // 
+            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
+            this.fnameDataGridViewTextBoxColumn.HeaderText = "fname";
+            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
+            // 
+            // lnameDataGridViewTextBoxColumn
+            // 
+            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
+            this.lnameDataGridViewTextBoxColumn.HeaderText = "lname";
+            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
+            // bdateDataGridViewTextBoxColumn
+            // 
+            this.bdateDataGridViewTextBoxColumn.DataPropertyName = "bdate";
+            this.bdateDataGridViewTextBoxColumn.HeaderText = "bdate";
+            this.bdateDataGridViewTextBoxColumn.Name = "bdateDataGridViewTextBoxColumn";
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // pictureDataGridViewImageColumn
+            // 
+            this.pictureDataGridViewImageColumn.DataPropertyName = "picture";
+            this.pictureDataGridViewImageColumn.HeaderText = "picture";
+            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
+            this.pictureDataGridViewImageColumn.Width = 120;
+            // 
+            // stdBindingSource
+            // 
+            this.stdBindingSource.DataMember = "std";
+            this.stdBindingSource.DataSource = this.qLsinhvienDataSetBindingSource;
+            // 
+            // qLsinhvienDataSetBindingSource
+            // 
+            this.qLsinhvienDataSetBindingSource.DataSource = this.qL_sinh_vienDataSet;
+            this.qLsinhvienDataSetBindingSource.Position = 0;
+            // 
+            // qL_sinh_vienDataSet
+            // 
+            this.qL_sinh_vienDataSet.DataSetName = "QL_sinh_vienDataSet";
+            this.qL_sinh_vienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // PictureBoxStudentImage1
             // 
             this.PictureBoxStudentImage1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
@@ -374,73 +439,21 @@
             this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
-            // qL_sinh_vienDataSet
-            // 
-            this.qL_sinh_vienDataSet.DataSetName = "QL_sinh_vienDataSet";
-            this.qL_sinh_vienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qLsinhvienDataSetBindingSource
-            // 
-            this.qLsinhvienDataSetBindingSource.DataSource = this.qL_sinh_vienDataSet;
-            this.qLsinhvienDataSetBindingSource.Position = 0;
-            // 
-            // stdBindingSource
-            // 
-            this.stdBindingSource.DataMember = "std";
-            this.stdBindingSource.DataSource = this.qLsinhvienDataSetBindingSource;
-            // 
             // stdTableAdapter
             // 
             this.stdTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // btn_addcourse
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // fnameDataGridViewTextBoxColumn
-            // 
-            this.fnameDataGridViewTextBoxColumn.DataPropertyName = "fname";
-            this.fnameDataGridViewTextBoxColumn.HeaderText = "fname";
-            this.fnameDataGridViewTextBoxColumn.Name = "fnameDataGridViewTextBoxColumn";
-            // 
-            // lnameDataGridViewTextBoxColumn
-            // 
-            this.lnameDataGridViewTextBoxColumn.DataPropertyName = "lname";
-            this.lnameDataGridViewTextBoxColumn.HeaderText = "lname";
-            this.lnameDataGridViewTextBoxColumn.Name = "lnameDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
-            // bdateDataGridViewTextBoxColumn
-            // 
-            this.bdateDataGridViewTextBoxColumn.DataPropertyName = "bdate";
-            this.bdateDataGridViewTextBoxColumn.HeaderText = "bdate";
-            this.bdateDataGridViewTextBoxColumn.Name = "bdateDataGridViewTextBoxColumn";
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // pictureDataGridViewImageColumn
-            // 
-            this.pictureDataGridViewImageColumn.DataPropertyName = "picture";
-            this.pictureDataGridViewImageColumn.HeaderText = "picture";
-            this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
-            this.pictureDataGridViewImageColumn.Width = 120;
+            this.btn_addcourse.BackColor = System.Drawing.Color.Snow;
+            this.btn_addcourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_addcourse.Location = new System.Drawing.Point(704, 684);
+            this.btn_addcourse.Name = "btn_addcourse";
+            this.btn_addcourse.Size = new System.Drawing.Size(148, 46);
+            this.btn_addcourse.TabIndex = 81;
+            this.btn_addcourse.Text = "Add Course";
+            this.btn_addcourse.UseVisualStyleBackColor = false;
+            this.btn_addcourse.Click += new System.EventHandler(this.btn_addcourse_Click);
             // 
             // ManageStudentsForm
             // 
@@ -448,6 +461,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1246, 742);
+            this.Controls.Add(this.btn_addcourse);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.tb_find);
             this.Controls.Add(this.label9);
@@ -480,10 +494,10 @@
             this.Text = "ManageStudentsForm";
             this.Load += new System.EventHandler(this.ManageStudentsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qL_sinh_vienDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLsinhvienDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLsinhvienDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qL_sinh_vienDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxStudentImage1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,5 +544,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn pictureDataGridViewImageColumn;
+        private System.Windows.Forms.Button btn_addcourse;
     }
 }

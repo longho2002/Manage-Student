@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
@@ -24,6 +25,24 @@ namespace QL_Sinh_Vien
             try
             {
                 STUDENT student = new STUDENT();
+                if (!tb_ID.Text.All(char.IsDigit))
+                {
+                    throw new Exception("ID mustn't have char");
+                }
+                bool containsInt = tb_LName.Text.Any(char.IsDigit);
+                containsInt = tb_FName.Text.Any(char.IsDigit);
+                if (containsInt == true)
+                {
+                    throw new Exception("Fname and Lname not contain digit");
+                }
+                if (Regex.IsMatch(tb_Address.Text, @"^\d+$"))
+                {
+                    throw new Exception("Address must be have char");
+                }
+                if (!Regex.IsMatch(tb_Phone.Text, @"^\d+$"))
+                {
+                    throw new Exception("Phone must be have number");
+                }
                 int id = Convert.ToInt32(tb_ID.Text);
                 string frame = tb_FName.Text;
                 string lname = tb_LName.Text;

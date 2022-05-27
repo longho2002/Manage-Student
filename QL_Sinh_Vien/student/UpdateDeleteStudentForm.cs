@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,7 +36,6 @@ namespace QL_Sinh_Vien
                     StudentsListForm stdListForm = new StudentsListForm();
                     stdListForm.DataGridView.DataSource = table;
                     StudentsListForm.flag = false;
-
                     stdListForm.DataGridView.ReadOnly = true;
                     DataGridViewImageColumn picol = new DataGridViewImageColumn();
                     stdListForm.DataGridView.RowTemplate.Height = 80;
@@ -77,7 +77,6 @@ namespace QL_Sinh_Vien
 
         private void btn_Remove_Click(object sender, EventArgs e)
         {
-
             try
             {
                 int studentId = Convert.ToInt32(tb_ID.Text); // display a confirmation message before the delete if ((MessageBox.Show("Are You Sure You Want To Delete This Student", "Delete Student", MessageBoxButtons. Yeslo, MessageBoxicon. Question) - DialogResult.Yes))
@@ -107,6 +106,24 @@ namespace QL_Sinh_Vien
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            if (!tb_ID.Text.All(char.IsDigit))
+            {
+                throw new Exception("ID mustn't have char");
+            }
+            bool containsInt = tb_LName.Text.Any(char.IsDigit);
+            containsInt = tb_FName.Text.Any(char.IsDigit);
+            if (containsInt == false)
+            {
+                throw new Exception("Fname and Lname not contain digit");
+            }
+            if (Regex.IsMatch(tb_Address.Text, @"^\d+$"))
+            {
+                throw new Exception("Address must be have char");
+            }
+            if (!Regex.IsMatch(tb_Phone.Text, @"^\d+$"))
+            {
+                throw new Exception("Phone must be have number");
+            }
             int id;
             string fname = tb_FName.Text;
             string lname = tb_LName.Text;
